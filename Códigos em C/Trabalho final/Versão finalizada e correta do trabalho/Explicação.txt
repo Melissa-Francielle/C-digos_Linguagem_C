@@ -1,0 +1,22 @@
+No nosso código utilizamos arquivo binário
+E logo de inicio temos a estrutura que demos nome de Game
+Onde temos os parâmetros como código, nome, plataforma, tipo, preço, classificação do publico, ano, fabricante e classificação do jogo.
+
+EXIBINDO
+Logo em seguido temos onde será exibido os registros que usuário fizer, chamando os parametros da struct para dentro dessa função void. 
+
+CADASTRO DO ARQ
+Lógicamente que a ordem do código não será dessa forma que será apresentado quando o código rodar, pois em seguida temos a função void para cadastro do registro. Criamos a variavel do tipo arquivo com ponteiro, e abrimos para fazer a escrita do registro, utilizando o ab para que abra o arquivo para gravção, assim os dados serão adicionados ao final do arquivo existente. 
+Demos a opção do usuário digitar quantos registros gostaria de fazer, assim percorre com o for e o cadastro pode ser feito normalmente, antes do arquivo ser fechado, todo o registro feito sera escrito no arquivo, utilizando a função Fwrite para esse processo, e assim o arquivo é fechado. 
+
+CONSULTA DO ARQ
+Nessa função também void pode ser feito a consulta do registro, vai ser aberto o arquivo para leitura, utilizando rb, o usuário escolhe o codigo do arquivo que gostaria consultar, e assim que a consulta é feita ele recebe o registro, caso contrário o usuário será informado de que seu registro não foi encontrado.
+
+
+ATUALIZAÇÃO DO ARQ
+Agora para atualizar o registro do jogo, também é possível buscar o registro que gostaria de atualizar por código, informa o código e o arquivo é aberto para atualização, foi utilizado função rb+, para que além de leitura também seja feito gravação do arquivo, e assim ser atualizado. Há a procura do código do registro que gostaria de atualizar, e se for encontrado ele entra com os parametros para ser atualizado, o usuário escreve o que tem que ser atualizado, e o que não precisar apenas digita novamente. Utilizamos a função Fseek para ir ao ponto atual no arquivo e assim ser escrito e atualizado o arquivo e novamente ele é fechado. 
+
+REMOÇÃO
+
+INT MAIN 
+Aqui na int main chamamos a struct, e foi criado a variavel de opção, já que vai ser necessário para a escolha no menu. Aqui aparece para o usuário as opções que ele pode selecionar, desde o cadastro até para Sair, utilizando switch foi feito o menu e chamando cada função. Caso o usuário queira sair ele pode selecionar 0 e assim o programa encerra. 
